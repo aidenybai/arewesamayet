@@ -20,6 +20,25 @@ function App() {
             [source]
           </a>
         </p>
+        <div
+          id="button"
+          style={{
+            display: 'flex',
+            height: '50px',
+            paddingBottom: '2rem',
+            textAlign: 'center',
+          }}
+        >
+          <small
+            style={{
+              margin: 'auto',
+              opacity: 0.5,
+              fontSize: '1.5rem',
+            }}
+          >
+            gimme a sec...
+          </small>
+        </div>
         <img
           src="/favicon.jpeg"
           alt="sama"
@@ -64,5 +83,7 @@ function App() {
   );
 }
 
-const root = document.getElementById('root');
-createRoot(root).render(<App />);
+setTimeout(() => {
+  const root = document.getElementById('root');
+  createRoot(root).render(<App />);
+}, 1000);
