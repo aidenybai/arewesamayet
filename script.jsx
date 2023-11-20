@@ -13,10 +13,10 @@ function App() {
           paddingRight: 'auto',
         }}
       >
-        <h1>its so over 💀</h1>
+        <h1>we're so back 😎</h1>
         <p>
-          current status: sam is gg forever. emmet shear is ceo{' '}
-          <a href="https://www.bloomberg.com/news/articles/2023-11-20/openai-s-board-hires-former-twitch-executive-shear-as-ceo?embedded-checkout=true">
+          current status: we are so fucking back{' '}
+          <a href="https://twitter.com/satyanadella/status/1726509045803336122e">
             [source]
           </a>
         </p>
@@ -40,10 +40,9 @@ function App() {
           </small>
         </div>
         <img
-          src="/favicon.jpeg"
+          src="/favicon.png"
           alt="sama"
           loading="lazy"
-          width={300}
           height={400}
           style={{ marginLeft: 'auto', marginRight: 'auto' }}
         />
