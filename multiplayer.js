@@ -14,7 +14,7 @@ import { createClient } from '@liveblocks/client';
     publicApiKey: PUBLIC_KEY,
   });
 
-  const room = client.enter(roomId, {
+  const room = client.enterRoom(roomId, {
     initialPresence: { cursor: null },
   });
   const { root } = await room.getStorage();
@@ -30,7 +30,6 @@ import { createClient } from '@liveblocks/client';
     ctx.canvas.width = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    paint();
   });
 
   room.subscribe('my-presence', () => {});
