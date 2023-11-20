@@ -34,9 +34,10 @@ import { createClient } from '@liveblocks/client';
   button.style.outline = 'none';
   button.style.marginLeft = 'auto';
   button.style.marginRight = 'auto';
+  button.style.borderRadius = '5px';
   button.addEventListener('click', () => {
     button.disabled = true;
-    button.style.opacity = '0.5';
+    button.style.opacity = '0.7';
     incrementCount();
     room.broadcastEvent({ type: 'OVER' });
 
