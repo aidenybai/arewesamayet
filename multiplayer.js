@@ -17,11 +17,8 @@ import { createClient } from '@liveblocks/client';
   console.log(status);
   const { root } = await room.getStorage();
 
-  let localCount = !isNaN(root.get('liveCount')) ? root.get('liveCount') : 0;
-
   function incrementCount() {
-    const currentCount = root.get('liveCount');
-    root.set('liveCount', currentCount + 1);
+    root.set('liveCount', root.get('liveCount') + 1);
   }
 
   const button = document.createElement('button');
@@ -38,16 +35,23 @@ import { createClient } from '@liveblocks/client';
   button.style.marginLeft = 'auto';
   button.style.marginRight = 'auto';
   button.addEventListener('click', () => {
+    button.disabled = true;
+    button.style.opacity = '0.5';
     incrementCount();
     room.broadcastEvent({ type: 'OVER' });
-    button.innerText = `We're so backs: ${++localCount}`;
+
+    setTimeout(() => {
+      button.disabled = false;
+      button.style.opacity = '1';
+    }, 300);
+    button.innerText = `We're so backs: ${root.get('liveCount')}`;
   });
   room.subscribe('event', ({ event }) => {
     if (event.type === 'OVER') {
       button.innerText = `We're so backs: ${root.get('liveCount')}`;
     }
   });
-  button.innerText = `We're so backs: ${localCount}`;
+  button.innerText = `We're so backs: ${root.get('liveCount')}`;
 
   let backoff = 100;
 
