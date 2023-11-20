@@ -13,7 +13,7 @@ function App() {
     >
       <h1>its so over 💀</h1>
       <p>
-        current status: emmet shear is ceo{' '}
+        current status: sam is gg forever. emmet shear is ceo{' '}
         <a href="https://www.bloomberg.com/news/articles/2023-11-20/openai-s-board-hires-former-twitch-executive-shear-as-ceo?embedded-checkout=true">
           [source]
         </a>
