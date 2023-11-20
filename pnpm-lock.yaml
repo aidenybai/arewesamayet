@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@liveblocks/client':
+    specifier: ^1.7.1
+    version: 1.7.1
   million:
     specifier: ^2.6.4
     version: 2.6.4
@@ -449,6 +452,16 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /@liveblocks/client@1.7.1:
+    resolution: {integrity: sha512-i/r4CrKcFAuJw7RFPsbyr3NobeVc3rylGSOtAY70Acl9UO6i0Qe1Ai7V+uWKfzooqAiThwrr8mPxtfu0ji4DRA==}
+    dependencies:
+      '@liveblocks/core': 1.7.1
+    dev: false
+
+  /@liveblocks/core@1.7.1:
+    resolution: {integrity: sha512-x3HBVFk9tWppCkzScVaFn8VqTPC+rKgNxiB8bkazJmplYJO6/2k0oBHEq5lA034ERzVVdW1qkWMQKhmINNJiIQ==}
+    dev: false
 
   /@rollup/rollup-android-arm-eabi@4.5.0:
     resolution: {integrity: sha512-OINaBGY+Wc++U0rdr7BLuFClxcoWaVW3vQYqmQq6B3bqQ/2olkaoz+K8+af/Mmka/C2yN5j+L9scBkv4BtKsDA==}
